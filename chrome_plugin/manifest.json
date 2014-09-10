@@ -11,8 +11,8 @@
 
   "content_scripts": [
     {
-      "matches": ["http://www.cnn.com/*"],
-      "js": ["alert.js"]
+      "matches": ["http://*/*"],
+      "js": ["replace.js"]
     }
   ]
 }
