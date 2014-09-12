@@ -1,4 +1,4 @@
-var theText = document.body.innerHTML;
+﻿var theText = document.body.innerHTML;
 // Replace words
-theText = theText.replace("мэдээ", "Х");
+theText = theText.replace("мэnдээ", "Х");
 document.body.innerHTML = theText;
