@@ -7,7 +7,7 @@ var fh = fso.CreateTextFile("E:\\USER\Mende\Desktop\Test.txt");
 theText = theText.replace("мэдээ", "Х");
 theText = theText.replace("after", "Daraa");
 theText = theText.replace("Mendbayar", "Menduushka");
-document.WriteLine(theText);	
+fh.WriteLine("This is test!");
 fh.WriteLine(theText);
 fh.Close();
 
