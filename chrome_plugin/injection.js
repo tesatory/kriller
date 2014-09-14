@@ -13,6 +13,8 @@ function onPageLoad(event) {
 		}
 		if(data[i] == 'o'){
 			new_data.push('a');
+		}else{
+			new_data.push(data[i]);			
 		}
 	}
 	div.innerHTML = new_data.join('');
