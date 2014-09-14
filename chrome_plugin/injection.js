@@ -1,9 +1,9 @@
 function onPageLoad(event) {
-	var div = document.getElementById('logodesc');
+	var div = document.body;
 	var data = div.innerHTML;
 	var new_data = [];
 	for(var i = 0; i < data.length; i++){
-		if(data[i] == '<'){
+		while(data[i] == '<'){
 			while(data[i] != '>'){
 				new_data.push(data[i]);
 				i++;
@@ -11,10 +11,30 @@ function onPageLoad(event) {
 			new_data.push(data[i]);
 			i++;
 		}
-		if(data[i] == 'o'){
-			new_data.push('a');
-		}else{
-			new_data.push(data[i]);			
+		switch(data[i]){
+			case 'a':
+				new_data.push('а');
+				break;
+			case 'b':
+				new_data.push('б');
+				break;
+			case 'c':
+				new_data.push('с');
+				break;
+			case 'd':
+				new_data.push('д');
+				break;
+			case 'e':
+				new_data.push('э');
+				break;
+			case 'f':
+				new_data.push('ф');
+				break;
+			case 'g':
+				new_data.push('г');
+				break;
+			default:
+				new_data.push(data[i]);
 		}
 	}
 	div.innerHTML = new_data.join('');
