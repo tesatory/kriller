@@ -1,20 +1,21 @@
 function onPageLoad(event) {
 	var div = document.getElementById('logodesc');
 	var data = div.innerHTML;
+	var new_data = [];
 	for(var i = 0; i < data.length; i++){
 		if(data[i] == '<'){
 			while(data[i] != '>'){
+				new_data.push(data[i]);
 				i++;
 			}
+			new_data.push(data[i]);
 			i++;
 		}
 		if(data[i] == 'o'){
-			console.log(i);
-			data[i] = 'a';
+			new_data.push('a');
 		}
 	}
-	console.log(data);
-	div.innerHTML = data;
+	div.innerHTML = new_data.join('');
 }
 
 window.addEventListener('load', onPageLoad, false);
